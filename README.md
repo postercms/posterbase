@@ -1,0 +1,2 @@
+# posterbase
+Server for PosterCMS
