@@ -1,0 +1,42 @@
+@import "~@blueprintjs/core/lib/scss/variables";
+@import "~@blueprintjs/core/src/blueprint";
+
+/*@tailwind preflight;*/
+
+@tailwind components;
+
+@tailwind utilities;
+
+body {
+  padding-top: $pt-navbar-height;
+  padding-left: $pt-navbar-height;
+}
+
+.bp3-navbar.vertical {
+  @apply .fixed;
+  @apply .h-full;
+  top: $pt-navbar-height;
+  width: $pt-navbar-height;
+  padding: 0;
+}
+
+.vertical .bp3-navbar-divider {
+  height: 1px;
+  width: 30px;
+  margin: 10px 0;
+}
+
+.bp3-dark .vertical .bp3-navbar-divider {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.vertical .bp3-navbar-heading {
+  margin-right: 0;
+}
+
+.vertical .bp3-navbar-group {
+  flex-flow: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}

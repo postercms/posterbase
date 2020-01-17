@@ -1,2 +1,11 @@
-# posterbase
-Server for PosterCMS
+# `posterpad`
+
+> TODO: description
+
+## Usage
+
+```
+const posterpad = require('posterpad');
+
+// TODO: DEMONSTRATE API
+```

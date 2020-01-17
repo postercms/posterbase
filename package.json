@@ -1,0 +1,69 @@
+{
+  "name": "posterbase",
+  "version": "0.0.1",
+  "description": "> TODO: description",
+  "author": "Akter Hossain <akterstack@gmail.com>",
+  "homepage": "https://github.com/posterpod/posterbase#readme",
+  "license": "MIT",
+  "main": "dist/index",
+  "types": "dist/index",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/posterbase/posterbase.git"
+  },
+  "scripts": {
+    "dev": "NODE_ENV=development webpack-dev-server --mode development --progress --hide-modules --hot --history-api-fallback --config scripts/webpack.base.js",
+    "build": "NODE_ENV=production webpack --mode production",
+    "lint:audit": "tslint --project ./",
+    "lint": "npm run lint:audit -- --fix",
+    "start": "node server.js"
+  },
+  "bugs": {
+    "url": "https://github.com/posterbase/posterbase/issues"
+  },
+  "dependencies": {
+    "posterpad": "~0.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.5",
+    "@babel/preset-env": "^7.7.6",
+    "@babel/preset-react": "^7.7.4",
+    "@blueprintjs/tslint-config": "^1.9.0",
+    "@types/node": "^13.1.7",
+    "@types/react": "^16.9.17",
+    "@types/react-dom": "^16.9.4",
+    "autoprefixer": "^9.7.3",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.3.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "lint-staged": "^9.5.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "node-sass": "^4.13.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "postcss": "^7.0.26",
+    "postcss-loader": "^3.0.0",
+    "prettier": "^1.19.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "rush": "0.0.2",
+    "sass-loader": "^8.0.0",
+    "source-map-loader": "^0.2.4",
+    "style-loader": "^1.0.1",
+    "stylelint": "^13.0.0",
+    "stylelint-config-recommended": "^3.0.0",
+    "stylelint-scss": "^3.13.0",
+    "tailwindcss": "^1.1.4",
+    "ts-loader": "^6.2.1",
+    "tslib": "^1.10.0",
+    "tslint": "^5.20.1",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-plugin-prettier": "^2.1.0",
+    "typescript": "^3.7.5",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0",
+    "webpack-merge": "^4.2.2"
+  }
+}
