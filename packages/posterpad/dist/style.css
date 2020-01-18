@@ -9755,8 +9755,7 @@ span.bp3-popover-target{
 }
 
 .bp3-toast-container.bp3-toast-container-top{
-  top:0;
-  bottom:auto
+  top:0
 }
 
 .bp3-toast-container.bp3-toast-container-bottom{
@@ -9777,7 +9776,7 @@ span.bp3-popover-target{
           align-items:flex-end
 }
 
-.bp3-toast-container-bottom .bp3-toast.bp3-toast-enter:not(.bp3-toast-enter-active),.bp3-toast-container-bottom .bp3-toast.bp3-toast-enter:not(.bp3-toast-enter-active) ~ .bp3-toast,.bp3-toast-container-bottom .bp3-toast.bp3-toast-appear:not(.bp3-toast-appear-active),.bp3-toast-container-bottom .bp3-toast.bp3-toast-appear:not(.bp3-toast-appear-active) ~ .bp3-toast,.bp3-toast-container-bottom .bp3-toast.bp3-toast-leave-active ~ .bp3-toast{
+.bp3-toast-container-bottom .bp3-toast.bp3-toast-enter:not(.bp3-toast-enter-active),.bp3-toast-container-bottom .bp3-toast.bp3-toast-enter:not(.bp3-toast-enter-active) ~ .bp3-toast,.bp3-toast-container-bottom .bp3-toast.bp3-toast-appear:not(.bp3-toast-appear-active),.bp3-toast-container-bottom .bp3-toast.bp3-toast-appear:not(.bp3-toast-appear-active) ~ .bp3-toast,.bp3-toast-container-bottom .bp3-toast.bp3-toast-exit-active ~ .bp3-toast,.bp3-toast-container-bottom .bp3-toast.bp3-toast-leave-active ~ .bp3-toast{
   -webkit-transform:translateY(60px);
           transform:translateY(60px)
 }

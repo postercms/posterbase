@@ -2,11 +2,11 @@ dependencies:
   '@babel/core': 7.8.3
   '@babel/preset-env': 7.8.3
   '@babel/preset-react': 7.8.3
-  '@blueprintjs/core': 3.22.3
+  '@blueprintjs/core': 3.23.0
   '@blueprintjs/tslint-config': 1.9.0
   '@rush-temp/posterbase': 'file:projects/posterbase.tgz'
   '@rush-temp/posterpad': 'file:projects/posterpad.tgz'
-  '@types/node': 13.1.7
+  '@types/node': 13.1.8
   '@types/react': 16.9.17
   '@types/react-dom': 16.9.4
   autoprefixer: 9.7.4
@@ -26,7 +26,7 @@ dependencies:
   rush: 0.0.2
   sass-loader: 8.0.2
   source-map-loader: 0.2.4
-  style-loader: 1.1.2
+  style-loader: 1.1.3
   stylelint: 13.0.0
   stylelint-config-recommended: 3.0.0
   stylelint-scss: 3.13.0
@@ -1512,7 +1512,7 @@ packages:
     dev: false
     resolution:
       integrity: sha512-jBD+G8+LWpMBBWvVcdr4QysjUE4mU/syrhN17o1u3gx0/WzJB1kwiVZAXRtWbsIPOwW8pF/YJV5+nmetPzepXg==
-  /@blueprintjs/core/3.22.3:
+  /@blueprintjs/core/3.23.0:
     dependencies:
       '@blueprintjs/icons': 3.13.0
       '@types/dom4': 2.0.1
@@ -1531,20 +1531,30 @@ packages:
       react: ^15.3.0 || 16
       react-dom: ^15.3.0 || 16
     resolution:
-      integrity: sha512-IaxkvJyF+4VCvAjMvyHtJ4qUiQNwgPu4zIxLRo1cBsu30gHjYzwe+xDdssBR7yRnXARguM6bkI523w+yJOerCA==
-  /@blueprintjs/core/3.22.3/react-dom@16.12.0:
+      integrity: sha512-/Qfbk5JzJFAeay1RAX/v0mGNoYF2GxgKd3PceyUqC3t5MRy5EdhAFP45c+UfZuyR92i6lZTWHCIwqRP2iUEhFA==
+  /@blueprintjs/core/3.23.0/react-dom@16.12.0+react@16.12.0:
     dependencies:
-      react-dom: 16.12.0
-      react-popper: 1.3.7
-      react-transition-group: /react-transition-group/2.9.0/react-dom@16.12.0
+      '@blueprintjs/icons': 3.13.0
+      '@types/dom4': 2.0.1
+      classnames: 2.2.6
+      dom4: 2.1.5
+      normalize.css: 8.0.1
+      popper.js: 1.16.0
+      react: 16.12.0
+      react-dom: /react-dom/16.12.0/react@16.12.0
+      react-lifecycles-compat: 3.0.4
+      react-popper: /react-popper/1.3.7/react@16.12.0
+      react-transition-group: /react-transition-group/2.9.0/react-dom@16.12.0+react@16.12.0
+      resize-observer-polyfill: 1.5.1
+      tslib: 1.9.3
     dev: false
     hasBin: true
-    id: registry.npmjs.org/@blueprintjs/core/3.22.3
+    id: registry.npmjs.org/@blueprintjs/core/3.23.0
     peerDependencies:
       react: ^15.3.0 || 16
       react-dom: ^15.3.0 || 16
     resolution:
-      integrity: sha512-IaxkvJyF+4VCvAjMvyHtJ4qUiQNwgPu4zIxLRo1cBsu30gHjYzwe+xDdssBR7yRnXARguM6bkI523w+yJOerCA==
+      integrity: sha512-/Qfbk5JzJFAeay1RAX/v0mGNoYF2GxgKd3PceyUqC3t5MRy5EdhAFP45c+UfZuyR92i6lZTWHCIwqRP2iUEhFA==
   /@blueprintjs/icons/3.13.0:
     dependencies:
       classnames: 2.2.6
@@ -1557,29 +1567,21 @@ packages:
       prettier: 1.19.1
       tslib: 1.9.3
       tslint-config-prettier: 1.18.0
-      tslint-plugin-prettier: 2.1.0
+      tslint-plugin-prettier: /tslint-plugin-prettier/2.1.0/prettier@1.19.1
       tslint-react: 4.1.0
     dev: false
     peerDependencies:
       tslint: ^5.12.1
     resolution:
       integrity: sha512-V2BhkmkLXQqbay3PVNskuxj5zx/UBmIx7f14W0SfxHTKADPujDXMf+gZwWuyjV1DvQsrRib7Wthz6+MvYG1gww==
-  /@blueprintjs/tslint-config/1.9.0/ff3abad4d9be041c1d02a7ee98ca0ec5:
+  /@blueprintjs/tslint-config/1.9.0/tslint@5.20.1+typescript@3.7.5:
     dependencies:
+      prettier: 1.19.1
+      tslib: 1.9.3
       tslint: /tslint/5.20.1/typescript@3.7.5
+      tslint-config-prettier: 1.18.0
       tslint-plugin-prettier: /tslint-plugin-prettier/2.1.0/prettier@1.19.1+tslint@5.20.1
       tslint-react: /tslint-react/4.1.0/tslint@5.20.1+typescript@3.7.5
-    dev: false
-    id: registry.npmjs.org/@blueprintjs/tslint-config/1.9.0
-    peerDependencies:
-      tslint: ^5.12.1
-    resolution:
-      integrity: sha512-V2BhkmkLXQqbay3PVNskuxj5zx/UBmIx7f14W0SfxHTKADPujDXMf+gZwWuyjV1DvQsrRib7Wthz6+MvYG1gww==
-  /@blueprintjs/tslint-config/1.9.0/tslint@5.20.1:
-    dependencies:
-      tslint: 5.20.1
-      tslint-plugin-prettier: /tslint-plugin-prettier/2.1.0/tslint@5.20.1
-      tslint-react: /tslint-react/4.1.0/tslint@5.20.1
     dev: false
     id: registry.npmjs.org/@blueprintjs/tslint-config/1.9.0
     peerDependencies:
@@ -1634,7 +1636,7 @@ packages:
     dependencies:
       '@types/events': 3.0.0
       '@types/minimatch': 3.0.3
-      '@types/node': 13.1.7
+      '@types/node': 13.1.8
     dev: false
     resolution:
       integrity: sha512-1Bh06cbWJUHMC97acuD6UMG29nMt0Aqz1vF3guLfG+kHHJhy3AyohZFFxYk2f7Q1SQIrNwvncxAE0N/9s70F2w==
@@ -1646,10 +1648,10 @@ packages:
     dev: false
     resolution:
       integrity: sha1-aaI6OtKcrwCX8G7aWbNh7i8GOfY=
-  /@types/node/13.1.7:
+  /@types/node/13.1.8:
     dev: false
     resolution:
-      integrity: sha512-HU0q9GXazqiKwviVxg9SI/+t/nAsGkvLDkIdxz+ObejG2nX6Si00TeLqHMoS+a/1tjH7a8YpKVQwtgHuMQsldg==
+      integrity: sha512-6XzyyNM9EKQW4HKuzbo/CkOIjn/evtCmsU+MUM1xDfJ+3/rNjBttM1NgN7AOQvN6tP1Sl1D1PIKMreTArnxM9A==
   /@types/normalize-package-data/2.4.0:
     dev: false
     resolution:
@@ -1692,7 +1694,7 @@ packages:
       integrity: sha512-GpTIuDpb9u4zIO165fUy9+fXcULdD8HFRNli04GehoMVbeNq7D6OBnqSmg3lxZnC+UvgUhEWKxdKiwYUkGltIw==
   /@types/vfile/3.0.2:
     dependencies:
-      '@types/node': 13.1.7
+      '@types/node': 13.1.8
       '@types/unist': 2.0.3
       '@types/vfile-message': 2.0.0
     dev: false
@@ -1872,14 +1874,9 @@ packages:
       ajv: '>=5.0.0'
     resolution:
       integrity: sha512-DCRfO/4nQ+89p/RK43i8Ezd41EqdGIU4ld7nGF8OQ14oc/we5rEntLCUa7+jrn3nn83BosfwZA0wb4pon2o8iQ==
-  /ajv-keywords/3.4.1:
-    dev: false
-    peerDependencies:
-      ajv: ^6.9.1
-    resolution:
-      integrity: sha512-RO1ibKvd27e6FEShVFfPALuHI3WjSVNeK5FIsmme/LYRNxjKuNj+Dt7bucLa6NdSv3JcVTyMlm9kGR84z1XpaQ==
   /ajv-keywords/3.4.1/ajv@6.10.2:
-    dependencies: {}
+    dependencies:
+      ajv: 6.10.2
     dev: false
     id: registry.npmjs.org/ajv-keywords/3.4.1
     peerDependencies:
@@ -2183,7 +2180,7 @@ packages:
       loader-utils: 1.2.3
       mkdirp: 0.5.1
       pify: 4.0.1
-      webpack: /webpack/4.41.5/webpack@4.41.5
+      webpack: 4.41.5
     dev: false
     engines:
       node: '>= 6.9'
@@ -2396,7 +2393,7 @@ packages:
   /browserslist/4.8.3:
     dependencies:
       caniuse-lite: 1.0.30001021
-      electron-to-chromium: 1.3.336
+      electron-to-chromium: 1.3.337
       node-releases: 1.1.45
     dev: false
     hasBin: true
@@ -3008,8 +3005,26 @@ packages:
     dev: false
     resolution:
       integrity: sha512-MJG9liiZ+ogc4TzUwuvbER1JRdgvUFSB5+VR/g5h82fGaIRWMWddtKBHi7/sVhfjQZ6SehlyhvQYrcYkaUIpLg==
-  /create-react-context/0.3.0:
+  /create-react-context/0.3.0/prop-types@15.7.2:
+    dependencies:
+      gud: 1.0.0
+      prop-types: 15.7.2
+      warning: 4.0.3
     dev: false
+    id: registry.npmjs.org/create-react-context/0.3.0
+    peerDependencies:
+      prop-types: ^15.0.0
+      react: ^0.14.0 || ^15.0.0 || ^16.0.0
+    resolution:
+      integrity: sha512-dNldIoSuNSvlTJ7slIKC/ZFGKexBMBrrcc+TTe1NdmROnaASuLPvqpwj9v4XS4uXZ8+YPu0sNmShX2rXI5LNsw==
+  /create-react-context/0.3.0/prop-types@15.7.2+react@16.12.0:
+    dependencies:
+      gud: 1.0.0
+      prop-types: 15.7.2
+      react: 16.12.0
+      warning: 4.0.3
+    dev: false
+    id: registry.npmjs.org/create-react-context/0.3.0
     peerDependencies:
       prop-types: ^15.0.0
       react: ^0.14.0 || ^15.0.0 || ^16.0.0
@@ -3108,7 +3123,7 @@ packages:
       postcss-modules-values: 3.0.0
       postcss-value-parser: 4.0.2
       schema-utils: 2.6.4
-      webpack: /webpack/4.41.5/webpack@4.41.5
+      webpack: 4.41.5
     dev: false
     engines:
       node: '>= 8.9.0'
@@ -3573,10 +3588,10 @@ packages:
     dev: false
     resolution:
       integrity: sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=
-  /electron-to-chromium/1.3.336:
+  /electron-to-chromium/1.3.337:
     dev: false
     resolution:
-      integrity: sha512-FtazvnXAizSVMxQNPqUcTv2UElY5r3uRPQwiU1Tyg/Yc2UFr+/3wqDoLIV9ES6ablW3IrCcR8uEK2ppxaNPWhw==
+      integrity: sha512-uJ+wLjslYQ/2rAusDg+6FlK8DLhHWTLCe7gkofBehTifW7KCkPVTn5rhKSCncWYNq34Iy/o4OfswuEkAO2RBaw==
   /elegant-spinner/1.0.1:
     dev: false
     engines:
@@ -4461,6 +4476,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-a30VEBm4PEdx1dRB7MFK7BejejvCvBronbLjht+sHuGYj8PHs7M/5Z+rt5lw551vZ7yfTCj4Vuyy3mSJytDWRQ==
+  /gud/1.0.0:
+    dev: false
+    resolution:
+      integrity: sha512-zGEOVKFM5sVPPrYs7J5/hYEw2Pof8KCyOwyhG8sAF26mCAeUFAcYPu1mwB7hhpIP29zOIBaDqwuHdLp0jvZXjw==
   /handle-thing/2.0.0:
     dev: false
     resolution:
@@ -4687,7 +4706,7 @@ packages:
       tapable: 1.1.3
       toposort: 1.0.7
       util.promisify: 1.0.0
-      webpack: /webpack/4.41.5/webpack@4.41.5
+      webpack: 4.41.5
     dev: false
     engines:
       node: '>=6.9'
@@ -4703,7 +4722,7 @@ packages:
       domutils: 1.7.0
       entities: 1.1.2
       inherits: 2.0.4
-      readable-stream: 3.4.0
+      readable-stream: 3.5.0
     dev: false
     resolution:
       integrity: sha512-IgieNijUMbkDovyoKObU1DUhm1iwNYE/fuifEoEHfd1oZKZDaONBSkal7Y01shxsM49R4XaMdGez3WnF9UfiCQ==
@@ -6045,7 +6064,7 @@ packages:
       loader-utils: 1.2.3
       normalize-url: 1.9.1
       schema-utils: 1.0.0
-      webpack: /webpack/4.41.5/webpack@4.41.5
+      webpack: 4.41.5
       webpack-sources: 1.4.3
     dev: false
     engines:
@@ -6538,7 +6557,7 @@ packages:
     dependencies:
       cssnano: 4.1.10
       last-call-webpack-plugin: 3.0.0
-      webpack: /webpack/4.41.5/webpack@4.41.5
+      webpack: 4.41.5
     dev: false
     id: registry.npmjs.org/optimize-css-assets-webpack-plugin/5.0.3
     peerDependencies:
@@ -7660,13 +7679,29 @@ packages:
   /react-popper/1.3.7:
     dependencies:
       '@babel/runtime': 7.8.3
-      create-react-context: 0.3.0
+      create-react-context: /create-react-context/0.3.0/prop-types@15.7.2
       deep-equal: 1.1.1
       popper.js: 1.16.0
       prop-types: 15.7.2
       typed-styles: 0.0.7
       warning: 4.0.3
     dev: false
+    peerDependencies:
+      react: 0.14.x || ^15.0.0 || ^16.0.0
+    resolution:
+      integrity: sha512-nmqYTx7QVjCm3WUZLeuOomna138R1luC4EqkW3hxJUrAe+3eNz3oFCLYdnPwILfn0mX1Ew2c3wctrjlUMYYUww==
+  /react-popper/1.3.7/react@16.12.0:
+    dependencies:
+      '@babel/runtime': 7.8.3
+      create-react-context: /create-react-context/0.3.0/prop-types@15.7.2+react@16.12.0
+      deep-equal: 1.1.1
+      popper.js: 1.16.0
+      prop-types: 15.7.2
+      react: 16.12.0
+      typed-styles: 0.0.7
+      warning: 4.0.3
+    dev: false
+    id: registry.npmjs.org/react-popper/1.3.7
     peerDependencies:
       react: 0.14.x || ^15.0.0 || ^16.0.0
     resolution:
@@ -7683,9 +7718,14 @@ packages:
       react-dom: '>=15.0.0'
     resolution:
       integrity: sha512-+HzNTCHpeQyl4MJ/bdE0u6XRMe9+XG/+aL4mCxVN4DnPBQ0/5bfHWPDuOZUzYdMj94daZaZdCCc1Dzt9R/xSSg==
-  /react-transition-group/2.9.0/react-dom@16.12.0:
+  /react-transition-group/2.9.0/react-dom@16.12.0+react@16.12.0:
     dependencies:
-      react-dom: 16.12.0
+      dom-helpers: 3.4.0
+      loose-envify: 1.4.0
+      prop-types: 15.7.2
+      react: 16.12.0
+      react-dom: /react-dom/16.12.0/react@16.12.0
+      react-lifecycles-compat: 3.0.4
     dev: false
     id: registry.npmjs.org/react-transition-group/2.9.0
     peerDependencies:
@@ -7755,7 +7795,7 @@ packages:
     dev: false
     resolution:
       integrity: sha512-Ebho8K4jIbHAxnuxi7o42OrZgF/ZTNcsZj6nRKyUmkhLFq8CHItp/fy6hQZuZmP/n3yZ9VBUbp4zz/mX8hmYPw==
-  /readable-stream/3.4.0:
+  /readable-stream/3.5.0:
     dependencies:
       inherits: 2.0.4
       string_decoder: 1.3.0
@@ -7764,7 +7804,7 @@ packages:
     engines:
       node: '>= 6'
     resolution:
-      integrity: sha512-jItXPLmrSR8jmTRmRWJXCnGJsfy85mB3Wd/uINMXA65yrnFo0cPClFIUWzo2najVNSl+mx7/4W8ttlLWJe99pQ==
+      integrity: sha512-gSz026xs2LfxBPudDuI41V1lka8cxg64E66SGe78zJlsUofOg/yqwezdIcdfwik6B4h8LFmWPA9ef9X3FiNFLA==
   /readdirp/2.2.1:
     dependencies:
       graceful-fs: 4.2.3
@@ -8201,7 +8241,7 @@ packages:
       node-sass: 4.13.1
       schema-utils: 2.6.4
       semver: 6.3.0
-      webpack: /webpack/4.41.5/webpack@4.41.5
+      webpack: 4.41.5
     dev: false
     engines:
       node: '>= 8.9.0'
@@ -8581,7 +8621,7 @@ packages:
       detect-node: 2.0.4
       hpack.js: 2.1.6
       obuf: 1.1.2
-      readable-stream: 3.4.0
+      readable-stream: 3.5.0
       wbuf: 1.7.3
     dev: false
     resolution:
@@ -8864,7 +8904,7 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-laJTa3Jb+VQpaC6DseHhF7dXVqHTfJPCRDaEbid/drOhgitgYku/letMUqOXFoWV0zIIUbjpdH2t+tYj4bQMRQ==
-  /style-loader/1.1.2:
+  /style-loader/1.1.3:
     dependencies:
       loader-utils: 1.2.3
       schema-utils: 2.6.4
@@ -8874,20 +8914,20 @@ packages:
     peerDependencies:
       webpack: ^4.0.0 || ^5.0.0
     resolution:
-      integrity: sha512-0Mpq1ZHFDCNq1F+6avNBgv+7q8V+mWRuzehxyJT+aKgzyN/yfKTwjYqaYwBgx+11UpQxL21zNQfzzlz+JcGURw==
-  /style-loader/1.1.2/webpack@4.41.5:
+      integrity: sha512-rlkH7X/22yuwFYK357fMN/BxYOorfnfq0eD7+vqlemSK4wEcejFF1dg4zxP0euBW8NrYx2WZzZ8PPFevr7D+Kw==
+  /style-loader/1.1.3/webpack@4.41.5:
     dependencies:
       loader-utils: 1.2.3
       schema-utils: 2.6.4
-      webpack: /webpack/4.41.5/webpack@4.41.5
+      webpack: 4.41.5
     dev: false
     engines:
       node: '>= 8.9.0'
-    id: registry.npmjs.org/style-loader/1.1.2
+    id: registry.npmjs.org/style-loader/1.1.3
     peerDependencies:
       webpack: ^4.0.0 || ^5.0.0
     resolution:
-      integrity: sha512-0Mpq1ZHFDCNq1F+6avNBgv+7q8V+mWRuzehxyJT+aKgzyN/yfKTwjYqaYwBgx+11UpQxL21zNQfzzlz+JcGURw==
+      integrity: sha512-rlkH7X/22yuwFYK357fMN/BxYOorfnfq0eD7+vqlemSK4wEcejFF1dg4zxP0euBW8NrYx2WZzZ8PPFevr7D+Kw==
   /style-search/0.1.0:
     dev: false
     resolution:
@@ -8910,7 +8950,7 @@ packages:
       integrity: sha512-F6yTRuc06xr1h5Qw/ykb2LuFynJ2IxkKfCMf+1xqPffkxh0S09Zc902XCffcsw/XMFq/OzQ1w54fLIDtmRNHnQ==
   /stylelint-config-recommended/3.0.0/stylelint@13.0.0:
     dependencies:
-      stylelint: /stylelint/13.0.0/postcss@7.0.26
+      stylelint: 13.0.0
     dev: false
     id: registry.npmjs.org/stylelint-config-recommended/3.0.0
     peerDependencies:
@@ -8942,7 +8982,7 @@ packages:
       postcss-resolve-nested-selector: 0.1.1
       postcss-selector-parser: 6.0.2
       postcss-value-parser: 4.0.2
-      stylelint: /stylelint/13.0.0/postcss@7.0.26
+      stylelint: 13.0.0
     dev: false
     engines:
       node: '>=8'
@@ -9003,17 +9043,6 @@ packages:
       write-file-atomic: 3.0.1
     dev: false
     hasBin: true
-    resolution:
-      integrity: sha512-6sjgOJbM3iLhnUtmRO0J1vvxie9VnhIZX/2fCehjylv9Gl9u0ytehGCTm9Lhw2p1F8yaNZn5UprvhCB8C3g/Tg==
-  /stylelint/13.0.0/postcss@7.0.26:
-    dependencies:
-      postcss-html: /postcss-html/0.36.0/d1f6a8d7ba09f07c09d5d416431bd0fd
-      postcss-jsx: /postcss-jsx/0.36.4/d1f6a8d7ba09f07c09d5d416431bd0fd
-      postcss-markdown: /postcss-markdown/0.36.0/d1f6a8d7ba09f07c09d5d416431bd0fd
-      postcss-syntax: /postcss-syntax/0.36.2/postcss@7.0.26
-    dev: false
-    hasBin: true
-    id: registry.npmjs.org/stylelint/13.0.0
     resolution:
       integrity: sha512-6sjgOJbM3iLhnUtmRO0J1vvxie9VnhIZX/2fCehjylv9Gl9u0ytehGCTm9Lhw2p1F8yaNZn5UprvhCB8C3g/Tg==
   /sugarss/2.0.0:
@@ -9144,17 +9173,6 @@ packages:
     dev: false
     engines:
       node: '>= 6.9.0'
-    peerDependencies:
-      webpack: ^4.0.0
-    resolution:
-      integrity: sha512-QMxecFz/gHQwteWwSo5nTc6UaICqN1bMedC5sMtUc7y3Ha3Q8y6ZO0iCR8pq4RJC8Hjf0FEPEHZqcMB/+DFCrA==
-  /terser-webpack-plugin/1.4.3/webpack@4.41.5:
-    dependencies:
-      webpack: /webpack/4.41.5/webpack@4.41.5
-    dev: false
-    engines:
-      node: '>= 6.9.0'
-    id: registry.npmjs.org/terser-webpack-plugin/1.4.3
     peerDependencies:
       webpack: ^4.0.0
     resolution:
@@ -9337,12 +9355,16 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-xPw9PgNPLG3iKRxmK7DWr+Ea/SzrvfHtjFt5LBl61gk2UBG/DB9kCXRjv+xyIU1rUtnayLeMUVJBcMX8Z17nDg==
-  /tslint-plugin-prettier/2.1.0:
+  /tslint-plugin-prettier/2.1.0/prettier@1.19.1:
     dependencies:
-      eslint-plugin-prettier: 2.7.0
+      eslint-plugin-prettier: /eslint-plugin-prettier/2.7.0/prettier@1.19.1
+      lines-and-columns: 1.1.6
+      prettier: 1.19.1
+      tslib: 1.10.0
     dev: false
     engines:
       node: '>= 4'
+    id: registry.npmjs.org/tslint-plugin-prettier/2.1.0
     peerDependencies:
       prettier: ^1.9.0
       tslint: ^5.0.0
@@ -9369,7 +9391,7 @@ packages:
       eslint-plugin-prettier: 2.7.0
       lines-and-columns: 1.1.6
       tslib: 1.10.0
-      tslint: 5.20.1
+      tslint: /tslint/5.20.1/typescript@3.7.5
     dev: false
     engines:
       node: '>= 4'
@@ -9383,17 +9405,6 @@ packages:
     dependencies:
       tsutils: 3.17.1
     dev: false
-    peerDependencies:
-      tslint: ^5.1.0
-      typescript: '>=2.8.0'
-    resolution:
-      integrity: sha512-Y7CbFn09X7Mpg6rc7t/WPbmjx9xPI8p1RsQyiGCLWgDR6sh3+IBSlT+bEkc0PSZcWwClOkqq2wPsID8Vep6szQ==
-  /tslint-react/4.1.0/tslint@5.20.1:
-    dependencies:
-      tslint: 5.20.1
-      tsutils: 3.17.1
-    dev: false
-    id: registry.npmjs.org/tslint-react/4.1.0
     peerDependencies:
       tslint: ^5.1.0
       typescript: '>=2.8.0'
@@ -9602,7 +9613,7 @@ packages:
       serialize-javascript: 1.9.1
       source-map: 0.6.1
       uglify-js: 3.7.5
-      webpack: /webpack/4.41.5/webpack@4.41.5
+      webpack: 4.41.5
       webpack-sources: 1.4.3
       worker-farm: 1.7.0
     dev: false
@@ -9959,7 +9970,7 @@ packages:
       loader-utils: 1.2.3
       supports-color: 6.1.0
       v8-compile-cache: 2.0.3
-      webpack: /webpack/4.41.5/webpack@4.41.5
+      webpack: 4.41.5
       yargs: 13.2.4
     dev: false
     engines:
@@ -9990,7 +10001,7 @@ packages:
       mime: 2.4.4
       mkdirp: 0.5.1
       range-parser: 1.2.1
-      webpack: /webpack/4.41.5/webpack@4.41.5
+      webpack: 4.41.5
       webpack-log: 2.0.0
     dev: false
     engines:
@@ -10074,7 +10085,7 @@ packages:
       strip-ansi: 3.0.1
       supports-color: 6.1.0
       url: 0.11.0
-      webpack: /webpack/4.41.5/webpack@4.41.5
+      webpack: 4.41.5
       webpack-dev-middleware: /webpack-dev-middleware/3.7.2/webpack@4.41.5
       webpack-log: 2.0.0
       ws: 6.2.1
@@ -10139,17 +10150,6 @@ packages:
     engines:
       node: '>=6.11.5'
     hasBin: true
-    resolution:
-      integrity: sha512-wp0Co4vpyumnp3KlkmpM5LWuzvZYayDwM2n17EHFr4qxBBbRokC7DJawPJC7TfSFZ9HZ6GsdH40EBj4UV0nmpw==
-  /webpack/4.41.5/webpack@4.41.5:
-    dependencies:
-      ajv-keywords: 3.4.1
-      terser-webpack-plugin: /terser-webpack-plugin/1.4.3/webpack@4.41.5
-    dev: false
-    engines:
-      node: '>=6.11.5'
-    hasBin: true
-    id: registry.npmjs.org/webpack/4.41.5
     resolution:
       integrity: sha512-wp0Co4vpyumnp3KlkmpM5LWuzvZYayDwM2n17EHFr4qxBBbRokC7DJawPJC7TfSFZ9HZ6GsdH40EBj4UV0nmpw==
   /websocket-driver/0.7.3:
@@ -10376,8 +10376,8 @@ packages:
       '@babel/core': 7.8.3
       '@babel/preset-env': /@babel/preset-env/7.8.3/@babel!core@7.8.3
       '@babel/preset-react': /@babel/preset-react/7.8.3/@babel!core@7.8.3
-      '@blueprintjs/tslint-config': /@blueprintjs/tslint-config/1.9.0/ff3abad4d9be041c1d02a7ee98ca0ec5
-      '@types/node': 13.1.7
+      '@blueprintjs/tslint-config': /@blueprintjs/tslint-config/1.9.0/tslint@5.20.1+typescript@3.7.5
+      '@types/node': 13.1.8
       '@types/react': 16.9.17
       '@types/react-dom': 16.9.4
       autoprefixer: 9.7.4
@@ -10397,8 +10397,8 @@ packages:
       rush: 0.0.2
       sass-loader: /sass-loader/8.0.2/node-sass@4.13.1+webpack@4.41.5
       source-map-loader: 0.2.4
-      style-loader: /style-loader/1.1.2/webpack@4.41.5
-      stylelint: /stylelint/13.0.0/postcss@7.0.26
+      style-loader: /style-loader/1.1.3/webpack@4.41.5
+      stylelint: 13.0.0
       stylelint-config-recommended: /stylelint-config-recommended/3.0.0/stylelint@13.0.0
       stylelint-scss: /stylelint-scss/3.13.0/stylelint@13.0.0
       tailwindcss: 1.1.4
@@ -10409,7 +10409,7 @@ packages:
       tslint-plugin-prettier: /tslint-plugin-prettier/2.1.0/prettier@1.19.1+tslint@5.20.1
       typescript: 3.7.5
       uglifyjs-webpack-plugin: /uglifyjs-webpack-plugin/2.2.0/webpack@4.41.5
-      webpack: /webpack/4.41.5/webpack@4.41.5
+      webpack: 4.41.5
       webpack-cli: /webpack-cli/3.3.10/webpack@4.41.5
       webpack-dev-server: /webpack-dev-server/3.10.1/webpack@4.41.5
       webpack-merge: 4.2.2
@@ -10422,42 +10422,42 @@ packages:
   'file:projects/posterpad.tgz':
     dependencies:
       '@babel/core': 7.8.3
-      '@babel/preset-env': 7.8.3
-      '@babel/preset-react': 7.8.3
-      '@blueprintjs/core': /@blueprintjs/core/3.22.3/react-dom@16.12.0
-      '@blueprintjs/tslint-config': /@blueprintjs/tslint-config/1.9.0/tslint@5.20.1
+      '@babel/preset-env': /@babel/preset-env/7.8.3/@babel!core@7.8.3
+      '@babel/preset-react': /@babel/preset-react/7.8.3/@babel!core@7.8.3
+      '@blueprintjs/core': /@blueprintjs/core/3.23.0/react-dom@16.12.0+react@16.12.0
+      '@blueprintjs/tslint-config': /@blueprintjs/tslint-config/1.9.0/tslint@5.20.1+typescript@3.7.5
       '@types/react': 16.9.17
       '@types/react-dom': 16.9.4
       autoprefixer: 9.7.4
-      babel-loader: 8.0.6
-      css-loader: 3.4.2
+      babel-loader: /babel-loader/8.0.6/@babel!core@7.8.3+webpack@4.41.5
+      css-loader: /css-loader/3.4.2/webpack@4.41.5
       html-loader: 0.5.5
-      html-webpack-plugin: 3.2.0
+      html-webpack-plugin: /html-webpack-plugin/3.2.0/webpack@4.41.5
       lint-staged: 9.5.0
-      mini-css-extract-plugin: 0.8.2
+      mini-css-extract-plugin: /mini-css-extract-plugin/0.8.2/webpack@4.41.5
       node-sass: 4.13.1
-      optimize-css-assets-webpack-plugin: 5.0.3
+      optimize-css-assets-webpack-plugin: /optimize-css-assets-webpack-plugin/5.0.3/webpack@4.41.5
       postcss: 7.0.26
       postcss-loader: 3.0.0
       react: 16.12.0
-      react-dom: 16.12.0
+      react-dom: /react-dom/16.12.0/react@16.12.0
       rush: 0.0.2
-      sass-loader: 8.0.2
+      sass-loader: /sass-loader/8.0.2/node-sass@4.13.1+webpack@4.41.5
       source-map-loader: 0.2.4
-      style-loader: 1.1.2
+      style-loader: /style-loader/1.1.3/webpack@4.41.5
       stylelint: 13.0.0
-      stylelint-config-recommended: 3.0.0
-      stylelint-scss: 3.13.0
+      stylelint-config-recommended: /stylelint-config-recommended/3.0.0/stylelint@13.0.0
+      stylelint-scss: /stylelint-scss/3.13.0/stylelint@13.0.0
       tailwindcss: 1.1.4
-      ts-loader: 6.2.1
-      tslint: 5.20.1
+      ts-loader: /ts-loader/6.2.1/typescript@3.7.5
+      tslint: /tslint/5.20.1/typescript@3.7.5
       tslint-config-prettier: 1.18.0
       tslint-plugin-prettier: /tslint-plugin-prettier/2.1.0/tslint@5.20.1
       typescript: 3.7.5
-      uglifyjs-webpack-plugin: 2.2.0
+      uglifyjs-webpack-plugin: /uglifyjs-webpack-plugin/2.2.0/webpack@4.41.5
       webpack: 4.41.5
-      webpack-cli: 3.3.10
-      webpack-dev-server: 3.10.1
+      webpack-cli: /webpack-cli/3.3.10/webpack@4.41.5
+      webpack-dev-server: /webpack-dev-server/3.10.1/webpack@4.41.5
       webpack-merge: 4.2.2
     dev: false
     name: '@rush-temp/posterpad'
