@@ -1,0 +1,36 @@
+{
+  "name": "react-revive",
+  "version": "0.0.1",
+  "description": "React storage engine (global state container) based on React Hooks",
+  "main": "dist/index",
+  "types": "dist/index",
+  "module": "dist/index",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:react-revive/react-revive.git"
+  },
+  "keywords": [
+    "react",
+    "redux",
+    "hooks",
+    "store",
+    "state"
+  ],
+  "author": "Akter Hossain <akterstack@gmail.com>",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "^16.12.0"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.17",
+    "react": "^16.12.0",
+    "tslint": "^5.20.1",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-plugin-prettier": "^2.0.1",
+    "typescript": "^3.7.4"
+  }
+}

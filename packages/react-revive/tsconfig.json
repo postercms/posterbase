@@ -7,11 +7,6 @@
     "moduleResolution": "node",
     "target": "es5",
     "lib": ["ESNext", "DOM"],
-    "jsx": "react",
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["src/*"]
-    }
   },
   "exclude": ["node_modules", "build", "scripts"],
   "include": ["src"]

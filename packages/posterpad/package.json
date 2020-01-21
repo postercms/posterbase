@@ -5,9 +5,9 @@
   "main": "dist/index",
   "scripts": {
     "dev": "NODE_ENV=development webpack-dev-server --mode development --progress --hide-modules --hot --history-api-fallback --config scripts/webpack.base.js",
-    "build:lib": "NODE_ENV=production webpack --mode production --config scripts/webpack.build.js",
-    "build:watch": "NODE_ENV=production webpack --mode production --config scripts/webpack.build.js --watch --progress",
-    "build:web": "NODE_ENV=production webpack --mode production",
+    "build:lib": "webpack --mode production --config scripts/webpack.build.js",
+    "build:watch": "NODE_ENV=development webpack --watch --progress --mode development --config scripts/webpack.build.js",
+    "build:web": "webpack --mode production",
     "lint:audit": "tslint --project ./",
     "lint": "npm run lint:audit -- --fix",
     "start": "node server.js"
@@ -19,7 +19,9 @@
   "keywords": [],
   "author": "akterstack@gmail.com",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "react-revive": "~0.0.1"
+  },
   "peerDependencies": {
     "@blueprintjs/core": "^3.22.2",
     "react": "^16.12.0",
@@ -42,7 +44,9 @@
     "node-sass": "^4.13.0",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "postcss": "^7.0.26",
+    "postcss-jsx": "^0.36.4",
     "postcss-loader": "^3.0.0",
+    "postcss-syntax": "^0.36.2",
     "rush": "0.0.2",
     "sass-loader": "^8.0.0",
     "source-map-loader": "^0.2.4",
@@ -52,6 +56,7 @@
     "stylelint-scss": "^3.13.0",
     "tailwindcss": "^1.1.4",
     "ts-loader": "^6.2.1",
+    "tslib": "^1.10.0",
     "tslint": "^5.20.1",
     "tslint-config-prettier": "^1.18.0",
     "tslint-plugin-prettier": "^2.0.1",
