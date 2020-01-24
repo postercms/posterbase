@@ -356,6 +356,11 @@
       "reviewCategory": "production"
     },
     {
+      "packageName": "@posterpad/router",
+      "projectFolder": "packages/posterpad-router",
+      "reviewCategory": "production"
+    },
+    {
       "packageName": "react-revive",
       "projectFolder": "packages/react-revive",
       "reviewCategory": "library"

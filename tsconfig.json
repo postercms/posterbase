@@ -1,5 +1,12 @@
 {
   "extends": "@akterstack/jskits/tsconfig.json",
+  "compilerOptions": {
+    "jsx": "react",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  },
   "exclude": ["node_modules", "build", "scripts"],
   "include": ["src"]
 }

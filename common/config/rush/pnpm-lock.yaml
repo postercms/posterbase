@@ -8,6 +8,7 @@ dependencies:
   '@rush-temp/posterbase': 'file:projects/posterbase.tgz'
   '@rush-temp/posterpad': 'file:projects/posterpad.tgz_prettier@1.19.1'
   '@rush-temp/react-revive': 'file:projects/react-revive.tgz_prettier@1.19.1'
+  '@rush-temp/router': 'file:projects/router.tgz_react@16.12.0'
   '@types/node': 13.1.8
   '@types/react': 16.9.18
   '@types/react-dom': 16.9.5
@@ -18,6 +19,7 @@ dependencies:
   html-webpack-plugin: 3.2.0_webpack@4.41.5
   lint-staged: 9.5.0
   mini-css-extract-plugin: 0.8.2_webpack@4.41.5
+  navi: 0.14.0
   node-sass: 4.13.1
   optimize-css-assets-webpack-plugin: 5.0.3_webpack@4.41.5
   postcss: 7.0.26
@@ -27,6 +29,7 @@ dependencies:
   prettier: 1.19.1
   react: 16.12.0
   react-dom: 16.12.0_react@16.12.0
+  react-navi: 0.14.3_navi@0.14.0+react@16.12.0
   rush: 0.0.2
   sass-loader: 8.0.2_node-sass@4.13.1+webpack@4.41.5
   source-map-loader: 0.2.4
@@ -1014,6 +1017,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-1Bh06cbWJUHMC97acuD6UMG29nMt0Aqz1vF3guLfG+kHHJhy3AyohZFFxYk2f7Q1SQIrNwvncxAE0N/9s70F2w==
+  /@types/history/4.7.4:
+    dev: false
+    resolution:
+      integrity: sha512-+o2igcuZA3xtOoFH56s+MCZVidwlJNcJID57DSCyawS2i910yG9vkwehCjJNZ6ImhCR5S9DbvIJKyYHcMyOfMw==
   /@types/minimatch/3.0.3:
     dev: false
     resolution:
@@ -3907,6 +3914,17 @@ packages:
     dev: false
     resolution:
       integrity: sha512-l9sfDFsuqtOqKDsQdqrMRk0U85RZc0RtOR9yPI7mRVOa4FsR/BVnZ0shmQRM96Ji99kYZP/7hn1cedc1+ApsTQ==
+  /history/4.10.1:
+    dependencies:
+      '@babel/runtime': 7.8.3
+      loose-envify: 1.4.0
+      resolve-pathname: 3.0.0
+      tiny-invariant: 1.0.6
+      tiny-warning: 1.0.3
+      value-equal: 1.0.1
+    dev: false
+    resolution:
+      integrity: sha512-36nwAD620w12kuzPAsyINPWJqlNbij+hpK1k9XRloDtym8mxzGYl2c17LnV6IAGB2Dmg4tEa7G7DlawS0+qjew==
   /hmac-drbg/1.0.1:
     dependencies:
       hash.js: 1.1.7
@@ -5472,6 +5490,12 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha512-fpoe2T0RbHwBTBUOftAfBPaDEi06ufaUai0mE6Yn1kacc3SnTErfb/h+X94VXzI64rKFHYImXSvdwGGCmwOqCA==
+  /navi/0.14.0:
+    dependencies:
+      history: 4.10.1
+    dev: false
+    resolution:
+      integrity: sha512-lp0nAhU/0HLRcrASlxTpjNFmfr0AHYbCi9IZtQqhRbYaXdOpROoE4wjAlQJHf/qQ4KttAT6JRZCMNQXk0FzsVw==
   /negotiator/0.6.2:
     dev: false
     engines:
@@ -6923,6 +6947,17 @@ packages:
     dev: false
     resolution:
       integrity: sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
+  /react-navi/0.14.3_navi@0.14.0+react@16.12.0:
+    dependencies:
+      '@types/history': 4.7.4
+      navi: 0.14.0
+      react: 16.12.0
+    dev: false
+    peerDependencies:
+      navi: ^0.14.0
+      react: ^16.8.0
+    resolution:
+      integrity: sha512-fht9sVtJKpiD6pk08+YNcGNLMlolm13pVWqwbQVgOqWZW/1OulhSn3pY0dyJ6PLUO56ieYk+kjou12yWSiDQEw==
   /react-popper/1.3.7_react@16.12.0:
     dependencies:
       '@babel/runtime': 7.8.3
@@ -7311,6 +7346,10 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-qYg9KP24dD5qka9J47d0aVky0N+b4fTU89LN9iDnjB5waksiC49rvMB0PrUJQGoTmH50XPiqOvAjDfaijGxYZw==
+  /resolve-pathname/3.0.0:
+    dev: false
+    resolution:
+      integrity: sha512-C7rARubxI8bXFNB/hqcp/4iUeIXJhJZvFPFPiSPRnhU5UPxzMFIl+2E6yY6c4k9giDJAhtV+enfA+G89N6Csng==
   /resolve-url/0.2.1:
     dev: false
     resolution:
@@ -8388,6 +8427,14 @@ packages:
     dev: false
     resolution:
       integrity: sha1-QFQRqOfmM5/mTbmiNN4R3DHgK9Q=
+  /tiny-invariant/1.0.6:
+    dev: false
+    resolution:
+      integrity: sha512-FOyLWWVjG+aC0UqG76V53yAWdXfH8bO6FNmyZOuUrzDzK8DI3/JRY25UD7+g49JWM1LXwymsKERB+DzI0dTEQA==
+  /tiny-warning/1.0.3:
+    dev: false
+    resolution:
+      integrity: sha512-lBN9zLN/oAf68o3zNXYrdCt1kP8WsiGW8Oo2ka41b2IM5JL/S1CTyX1rW0mb/zSuJun0ZUrDxx4sqvYS2FWzPA==
   /to-arraybuffer/1.0.1:
     dev: false
     resolution:
@@ -8986,6 +9033,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-DpKm2Ui/xN7/HQKCtpZxoRWBhZ9Z0kqtygG8XCgNQ8ZlDnxuQmWhj566j8fN4Cu3/JmbhsDo7fcAJq4s9h27Ew==
+  /value-equal/1.0.1:
+    dev: false
+    resolution:
+      integrity: sha512-NOJ6JZCAWr0zlxZt+xqCHNTEKOsrks2HQd4MqhP1qy4z1SkbEP467eNx6TgDKXMvUOb+OENfJCZwM+16n7fRfw==
   /vary/1.1.2:
     dev: false
     engines:
@@ -9469,7 +9520,7 @@ packages:
     dev: false
     name: '@rush-temp/posterbase'
     resolution:
-      integrity: sha512-7KFtacCa/HWIHyiaUTnt0Pk+a4btpe5IuKD4gPTFyZ+EqEwLhT9fcAqRmZG7s7mcvN2rv7PY8nFxKW1vlyNB3g==
+      integrity: sha512-ESv3a6RDFJciQAQjg21JQGCLUoQDEkM8FOQFy4TftbSHXTUWdTEcQf7jHqrh6FU9mePcFYgFubJXb56OE+bYLw==
       tarball: 'file:projects/posterbase.tgz'
     version: 0.0.0
   'file:projects/posterpad.tgz_prettier@1.19.1':
@@ -9488,6 +9539,7 @@ packages:
       html-webpack-plugin: 3.2.0_webpack@4.41.5
       lint-staged: 9.5.0
       mini-css-extract-plugin: 0.8.2_webpack@4.41.5
+      navi: 0.14.0
       node-sass: 4.13.1
       optimize-css-assets-webpack-plugin: 5.0.3_webpack@4.41.5
       postcss: 7.0.26
@@ -9496,6 +9548,7 @@ packages:
       postcss-syntax: 0.36.2_postcss@7.0.26
       react: 16.12.0
       react-dom: 16.12.0_react@16.12.0
+      react-navi: 0.14.3_navi@0.14.0+react@16.12.0
       rush: 0.0.2
       sass-loader: 8.0.2_node-sass@4.13.1+webpack@4.41.5
       source-map-loader: 0.2.4
@@ -9541,6 +9594,19 @@ packages:
       integrity: sha512-1wl5Y+Xpi3335nI71fFOxuowYNv/OPJIbmnsIiGNR9F1Mji1laP8mDngtHckLUyxA64GXUNm67b/s0Q6g6eJmg==
       tarball: 'file:projects/react-revive.tgz'
     version: 0.0.0
+  'file:projects/router.tgz_react@16.12.0':
+    dependencies:
+      navi: 0.14.0
+      react-navi: 0.14.3_navi@0.14.0+react@16.12.0
+    dev: false
+    id: 'file:projects/router.tgz'
+    name: '@rush-temp/router'
+    peerDependencies:
+      react: '*'
+    resolution:
+      integrity: sha512-yUgrt/v6ODWUYSr2wfZHwbaQ7/msl/J/1tzCrzy+FIeqyE4VZLRR+YSzt9V1Xx8Mr3WWbn4Kpk+dInv4KLclQw==
+      tarball: 'file:projects/router.tgz'
+    version: 0.0.0
 registry: ''
 specifiers:
   '@babel/core': ^7.7.5
@@ -9552,6 +9618,7 @@ specifiers:
   '@rush-temp/posterbase': 'file:./projects/posterbase.tgz'
   '@rush-temp/posterpad': 'file:./projects/posterpad.tgz'
   '@rush-temp/react-revive': 'file:./projects/react-revive.tgz'
+  '@rush-temp/router': 'file:./projects/router.tgz'
   '@types/node': ^13.1.7
   '@types/react': ^16.9.17
   '@types/react-dom': ^16.9.4
@@ -9562,6 +9629,7 @@ specifiers:
   html-webpack-plugin: ^3.2.0
   lint-staged: ^9.5.0
   mini-css-extract-plugin: ^0.8.0
+  navi: ^0.14.0
   node-sass: ^4.13.0
   optimize-css-assets-webpack-plugin: ^5.0.3
   postcss: ^7.0.26
@@ -9571,6 +9639,7 @@ specifiers:
   prettier: ^1.19.1
   react: ^16.12.0
   react-dom: ^16.12.0
+  react-navi: ^0.14.3
   rush: 0.0.2
   sass-loader: ^8.0.0
   source-map-loader: ^0.2.4
