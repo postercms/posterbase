@@ -4,7 +4,6 @@ import { Router as NaviRouter, View } from 'react-navi';
 
 function createRoute(basepath: string = ''): (e: any) => [string, any] {
   return (elem: any) => {
-    console.log(elem.props);
     const path = elem.props.path;
     const getData = elem.props.fetchData;
     const Layout = elem.props.layout;
