@@ -7,15 +7,11 @@ var react_navi_1 = require("react-navi");
 function createRoute(basepath) {
     if (basepath === void 0) { basepath = ''; }
     return function (elem) {
-        console.log(elem.props);
-        var path = elem.props.path;
-        var getData = elem.props.fetchData;
-        var Layout = elem.props.layout;
-        var view = Layout ? react_1.default.createElement(Layout, null, elem) : elem;
         return [
-            basepath + path,
-            navi_1.route(tslib_1.__assign(tslib_1.__assign({}, elem.props.path), { getData: getData,
-                view: view })),
+            basepath + elem.props.path,
+            navi_1.route({
+                view: elem,
+            }),
         ];
     };
 }
@@ -30,4 +26,4 @@ function Router(props) {
             react_1.default.createElement(react_navi_1.View, null))));
 }
 exports.Router = Router;
-//# sourceMappingURL=Router.js.map
+//# sourceMappingURL=index copy.js.map

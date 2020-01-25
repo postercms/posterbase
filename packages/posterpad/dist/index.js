@@ -744,6 +744,18 @@ eval("__webpack_require__.r(__webpack_exports__);\nfunction valueOf(obj) {\n  re
 
 /***/ }),
 
+/***/ "../posterpad-router/dist/Router.js":
+/*!*******************************!*\
+  !*** .-router/dist/Router.js ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar tslib_1 = __webpack_require__(/*! tslib */ \"../../common/temp/node_modules/.pnpm/registry.npmjs.org/tslib/1.10.0/node_modules/tslib/tslib.es6.js\");\nvar react_1 = tslib_1.__importStar(__webpack_require__(/*! react */ \"react\"));\nvar navi_1 = __webpack_require__(/*! navi */ \"../../common/temp/node_modules/.pnpm/registry.npmjs.org/navi/0.14.0/node_modules/navi/dist/es/index.js\");\nvar react_navi_1 = __webpack_require__(/*! react-navi */ \"../../common/temp/node_modules/.pnpm/registry.npmjs.org/react-navi/0.14.3_navi@0.14.0+react@16.12.0/node_modules/react-navi/dist/es/index.js\");\nfunction createRoute(basepath) {\n    if (basepath === void 0) { basepath = ''; }\n    return function (elem) {\n        console.log(elem.props);\n        var path = elem.props.path;\n        var getData = elem.props.fetchData;\n        var Layout = elem.props.layout;\n        var view = Layout ? react_1.default.createElement(Layout, null, elem) : elem;\n        return [\n            basepath + path,\n            navi_1.route(tslib_1.__assign(tslib_1.__assign({}, elem.props.path), { getData: getData,\n                view: view })),\n        ];\n    };\n}\nfunction Router(props) {\n    var routes = props.children.reduce(function (acc, child) {\n        var _a = createRoute(props.basepath)(child), path = _a[0], route_ = _a[1];\n        acc[path] = route_;\n        return acc;\n    }, {});\n    return (react_1.default.createElement(react_navi_1.Router, { routes: navi_1.mount(routes) },\n        react_1.default.createElement(react_1.Suspense, { fallback: null },\n            react_1.default.createElement(react_navi_1.View, null))));\n}\nexports.Router = Router;\n\n\n//# sourceURL=webpack://posterpad/.-router/dist/Router.js?");
+
+/***/ }),
+
 /***/ "../posterpad-router/dist/index.js":
 /*!******************************!*\
   !*** .-router/dist/index.js ***!
@@ -752,7 +764,7 @@ eval("__webpack_require__.r(__webpack_exports__);\nfunction valueOf(obj) {\n  re
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar tslib_1 = __webpack_require__(/*! tslib */ \"../../common/temp/node_modules/.pnpm/registry.npmjs.org/tslib/1.10.0/node_modules/tslib/tslib.es6.js\");\nvar react_1 = tslib_1.__importStar(__webpack_require__(/*! react */ \"react\"));\nvar navi_1 = __webpack_require__(/*! navi */ \"../../common/temp/node_modules/.pnpm/registry.npmjs.org/navi/0.14.0/node_modules/navi/dist/es/index.js\");\nvar react_navi_1 = __webpack_require__(/*! react-navi */ \"../../common/temp/node_modules/.pnpm/registry.npmjs.org/react-navi/0.14.3_navi@0.14.0+react@16.12.0/node_modules/react-navi/dist/es/index.js\");\nfunction Landing() {\n    return react_1.default.createElement(\"div\", null, \"Landing...\");\n}\nvar routes = navi_1.mount({\n    '/': navi_1.route({\n        title: \"Hats 'n' Flamethrowers 'r' Us\",\n        view: react_1.default.createElement(Landing, null),\n    }),\n});\nfunction Abc() {\n    return (react_1.default.createElement(react_navi_1.Router, { routes: routes },\n        react_1.default.createElement(react_1.Suspense, { fallback: null },\n            react_1.default.createElement(react_navi_1.View, null))));\n}\nexports.Abc = Abc;\n\n\n//# sourceURL=webpack://posterpad/.-router/dist/index.js?");
+eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar tslib_1 = __webpack_require__(/*! tslib */ \"../../common/temp/node_modules/.pnpm/registry.npmjs.org/tslib/1.10.0/node_modules/tslib/tslib.es6.js\");\ntslib_1.__exportStar(__webpack_require__(/*! ./Router */ \"../posterpad-router/dist/Router.js\"), exports);\n\n\n//# sourceURL=webpack://posterpad/.-router/dist/index.js?");
 
 /***/ }),
 
@@ -764,7 +776,19 @@ eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar ts
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar tslib_1 = __webpack_require__(/*! tslib */ \"../../common/temp/node_modules/.pnpm/registry.npmjs.org/tslib/1.10.0/node_modules/tslib/tslib.es6.js\");\n// tslint:disable-next-line:no-submodule-imports\n__webpack_require__(/*! @/assets/scss/style.scss */ \"./src/assets/scss/style.scss\");\nvar React = tslib_1.__importStar(__webpack_require__(/*! react */ \"react\"));\nvar router_1 = __webpack_require__(/*! @posterpad/router */ \"../posterpad-router/dist/index.js\");\nfunction App() {\n    return (React.createElement(\"div\", { className: \"flex flex-wrap\" },\n        React.createElement(\"div\", { className: \"w-full ml-auto bg-grey\" }, \"Hello, Posters!\"),\n        React.createElement(router_1.Abc, null)));\n}\nexports.App = App;\n\n\n//# sourceURL=webpack://posterpad/./src/App.tsx?");
+eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar tslib_1 = __webpack_require__(/*! tslib */ \"../../common/temp/node_modules/.pnpm/registry.npmjs.org/tslib/1.10.0/node_modules/tslib/tslib.es6.js\");\n// tslint:disable-next-line:no-submodule-imports\n__webpack_require__(/*! @/assets/scss/style.scss */ \"./src/assets/scss/style.scss\");\nvar React = tslib_1.__importStar(__webpack_require__(/*! react */ \"react\"));\nvar router_1 = __webpack_require__(/*! @posterpad/router */ \"../posterpad-router/dist/index.js\");\nvar api_1 = tslib_1.__importDefault(__webpack_require__(/*! ./api */ \"./src/api.ts\"));\nfunction Home(props) {\n    return React.createElement(\"div\", null, \"Home\");\n}\nfunction About(props) {\n    return React.createElement(\"div\", null, \"About\");\n}\nfunction Layout(props) {\n    return (React.createElement(\"div\", null,\n        React.createElement(\"h3\", null, \"column layout\"),\n        props.children));\n}\nfunction App() {\n    return (React.createElement(\"div\", { className: \"flex flex-wrap\" },\n        React.createElement(\"div\", { className: \"w-full ml-auto bg-grey\" }, \"Hello, Posters!\"),\n        React.createElement(router_1.Router, null,\n            React.createElement(Home, { path: \"/\" }),\n            React.createElement(About, { path: \"/about\", layout: Layout, fetchData: api_1.default.fetchProducts }))));\n}\nexports.App = App;\n\n\n//# sourceURL=webpack://posterpad/./src/App.tsx?");
+
+/***/ }),
+
+/***/ "./src/api.ts":
+/*!********************!*\
+  !*** ./src/api.ts ***!
+  \********************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar tslib_1 = __webpack_require__(/*! tslib */ \"../../common/temp/node_modules/.pnpm/registry.npmjs.org/tslib/1.10.0/node_modules/tslib/tslib.es6.js\");\nvar db = {\n    hat: {\n        emoji: '🧢',\n        title: 'Hat',\n        price: '$50.00',\n    },\n    flamethrower: {\n        emoji: '🔥🔫',\n        title: 'Not a flamethrower',\n        price: '$500.00',\n    },\n};\nexports.default = {\n    fetchProduct: function (id) { return tslib_1.__awaiter(void 0, void 0, void 0, function () {\n        var product;\n        return tslib_1.__generator(this, function (_a) {\n            switch (_a.label) {\n                case 0: return [4 /*yield*/, delay(2000)];\n                case 1:\n                    _a.sent();\n                    return [4 /*yield*/, db[id]];\n                case 2:\n                    product = _a.sent();\n                    return [2 /*return*/, product];\n            }\n        });\n    }); },\n    fetchProducts: function () { return tslib_1.__awaiter(void 0, void 0, void 0, function () {\n        return tslib_1.__generator(this, function (_a) {\n            switch (_a.label) {\n                case 0: return [4 /*yield*/, delay(3000)];\n                case 1:\n                    _a.sent();\n                    return [2 /*return*/, db];\n            }\n        });\n    }); },\n};\nfunction delay(ms) {\n    return new Promise(function (resolve) { return setTimeout(resolve, ms); });\n}\n\n\n//# sourceURL=webpack://posterpad/./src/api.ts?");
 
 /***/ }),
 

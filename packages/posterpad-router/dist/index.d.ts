@@ -1,2 +1,1 @@
-/// <reference types="react" />
-export declare function Abc(): JSX.Element;
+export * from './Router';
