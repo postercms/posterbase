@@ -1,9 +1,0 @@
-@tailwind preflight;
-
-@tailwind components;
-
-@tailwind utilities;
-
-h1 {
-  color: #999999;
-}

@@ -1,7 +1,7 @@
 @import "~@blueprintjs/core/lib/scss/variables";
 @import "~@blueprintjs/core/src/blueprint";
 
-/*@tailwind preflight;*/
+@tailwind base;
 
 @tailwind components;
 

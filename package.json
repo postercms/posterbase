@@ -22,6 +22,7 @@
     "url": "https://github.com/posterbase/posterbase/issues"
   },
   "dependencies": {
+    "firebase": "^7.7.0",
     "posterpad": "~0.0.1"
   },
   "devDependencies": {

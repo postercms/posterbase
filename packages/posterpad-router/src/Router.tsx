@@ -20,7 +20,8 @@ function createRoute(basepath: string = ''): (e: any) => [string, any] {
 }
 
 export function Router(props: any) {
-  const routes = props.children.reduce((acc: {}, child: any) => {
+  const children = props.children.length ? props.children : [props.children];
+  const routes = children.reduce((acc: {}, child: any) => {
     const [path, route_] = createRoute(props.basepath)(child);
     acc[path] = route_;
     return acc;

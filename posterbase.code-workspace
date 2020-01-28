@@ -2,7 +2,14 @@
   "folders": [
     {
       "path": "."
+    },
+    {
+      "path": "/Users/akter/Workspace/others/quickstart-js"
     }
   ],
-  "settings": {}
+  "settings": {
+    "cSpell.words": [
+      "posterbase"
+    ]
+  }
 }
