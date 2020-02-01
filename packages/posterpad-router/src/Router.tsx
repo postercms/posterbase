@@ -1,16 +1,17 @@
 import React, { Suspense } from 'react';
-import { mount, route } from 'navi';
-import { Router as NaviRouter, View } from 'react-navi';
+import * as Navi from 'navi';
+import * as ReactNavi from 'react-navi';
 
-function createRoute(basepath: string = ''): (e: any) => [string, any] {
+function createRoute(basePath: string = ''): (e: any) => [string, any] {
   return (elem: any) => {
     const path = elem.props.path;
     const getData = elem.props.fetchData;
+    // tslint:disable-next-line: variable-name
     const Layout = elem.props.layout;
     const view = Layout ? <Layout>{elem}</Layout> : elem;
     return [
-      basepath + path,
-      route({
+      basePath + path,
+      Navi.route({
         ...elem.props.path,
         getData,
         view,
@@ -19,19 +20,30 @@ function createRoute(basepath: string = ''): (e: any) => [string, any] {
   };
 }
 
+function preRoute(middleware, props, route) {
+  return Navi.map(async (req, ctx) => {
+    return middleware(props, route, req, ctx);
+  });
+}
+
 export function Router(props: any) {
   const children = props.children.length ? props.children : [props.children];
   const routes = children.reduce((acc: {}, child: any) => {
-    const [path, route_] = createRoute(props.basepath)(child);
-    acc[path] = route_;
+    const [path, route] = createRoute(child.props.basePath || props.basePath)(
+      child,
+    );
+    acc[path] =
+      typeof props.before === 'function'
+        ? preRoute(props.before, child.props, route)
+        : route;
     return acc;
   }, {});
 
   return (
-    <NaviRouter routes={mount(routes)}>
+    <ReactNavi.Router routes={Navi.mount(routes)}>
       <Suspense fallback={null}>
-        <View />
+        <ReactNavi.View />
       </Suspense>
-    </NaviRouter>
+    </ReactNavi.Router>
   );
 }

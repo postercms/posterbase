@@ -8,14 +8,14 @@ export function Setup(props) {
           <div className="mb-4">
             <label
               className="block text-gray-700 text-sm font-bold mb-2"
-              htmlFor="username">
-              Firebase app id
+              htmlFor="token">
+              Github token
             </label>
             <input
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              id="firebaseAppId"
+              id="token"
               type="text"
-              placeholder="Firebase app id"
+              placeholder="Github token"
             />
           </div>
         </form>
