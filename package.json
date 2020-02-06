@@ -14,17 +14,23 @@
   "scripts": {
     "dev": "NODE_ENV=development webpack-dev-server --mode development --progress --hide-modules --hot --history-api-fallback --config scripts/webpack.base.js",
     "build": "NODE_ENV=production webpack --mode production",
+    "build:w": "exit 1",
     "lint:audit": "tslint --project ./",
     "lint": "npm run lint:audit -- --fix",
-    "start": "node server.js"
+    "start": "node server.js",
+    "lib:w": "node scripts/libw"
   },
   "bugs": {
     "url": "https://github.com/posterbase/posterbase/issues"
   },
   "dependencies": {
+    "@blueprintjs/core": "~3.23.1",
     "@octokit/rest": "^16.41.1",
+    "@posterpad/components": "~1.0.0",
+    "@posterpad/pages": "~1.0.0",
+    "@posterpad/router": "~1.0.0",
+    "axios": "^0.19.2",
     "firebase": "^7.7.0",
-    "posterpad": "~0.0.1",
     "pouchdb": "^7.1.1",
     "pouchdb-load": "^1.4.6"
   },

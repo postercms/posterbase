@@ -4,11 +4,14 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const devMode = process.env.NODE_ENV === 'development';
 
 module.exports = {
+  entry: {
+    main: './src/main.tsx',
+  },
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
     alias: {
-      '@': '../src'
-    }
+      '@': '../src',
+    },
   },
   output: {
     path: path.join(__dirname, 'resources'),
@@ -21,14 +24,14 @@ module.exports = {
         exclude: /node_modules/,
         use: [
           {
-            loader: "ts-loader"
-          }
-        ]
+            loader: 'ts-loader',
+          },
+        ],
       },
       {
-        enforce: "pre",
+        enforce: 'pre',
         test: /\.js$/,
-        loader: "source-map-loader"
+        loader: 'source-map-loader',
       },
       {
         test: /\.(sa|sc|c)ss$/,
@@ -46,8 +49,8 @@ module.exports = {
       },
       {
         test: /\.(png|woff|woff2|eot|ttf|svg)$/,
-        loader: 'url-loader?limit=100000'
-      }
+        loader: 'url-loader?limit=100000',
+      },
     ],
   },
   plugins: [
@@ -59,11 +62,6 @@ module.exports = {
       template: './src/index.html',
       filename: './index.html',
     }),
-  ],
-  externals: [
-    // todo: enable this before production release
-    // "react": "React",
-    // "react-dom": "ReactDOM"
   ],
   devServer: {
     port: 3007,

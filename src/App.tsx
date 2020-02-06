@@ -1,6 +1,8 @@
+// tslint:disable-next-line:no-submodule-imports
+import '@/assets/scss/style.scss';
 import React from 'react';
 import { Router, Navi } from '@posterpad/router';
-import { Home, Login } from '@/pages';
+import { Home, Login } from '@posterpad/pages';
 
 function beforeEach(props, route, req, ctx) {
   if (props.public) {

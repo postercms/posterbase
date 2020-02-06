@@ -9,6 +9,10 @@ function createRoute(basePath: string = ''): (e: any) => [string, any] {
     // tslint:disable-next-line: variable-name
     const Layout = elem.props.layout;
     const view = Layout ? <Layout>{elem}</Layout> : elem;
+    console.log('asdgfdgdfsg');
+    console.log('asdgfdgdfsg');
+    console.log('asdgfdgdfsg');
+
     return [
       basePath + path,
       Navi.route({

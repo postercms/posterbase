@@ -7,7 +7,7 @@
   "module": "dist/index",
   "scripts": {
     "build": "tsc",
-    "build:watch": "tsc -w"
+    "build:w": "tsc -w"
   },
   "repository": {
     "type": "git",
