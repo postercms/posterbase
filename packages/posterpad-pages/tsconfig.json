@@ -10,5 +10,5 @@
     }
   },
   "exclude": ["node_modules", "build", "scripts"],
-  "include": ["src"]
+  "include": ["src", "../../src/Login.tsx"]
 }

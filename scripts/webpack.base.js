@@ -4,13 +4,14 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const devMode = process.env.NODE_ENV === 'development';
 
 module.exports = {
+  devtool: 'cheap-source-map',
   entry: {
     main: './src/main.tsx',
   },
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
     alias: {
-      '@': '../src',
+      '@': path.resolve(__dirname, '../src'),
     },
   },
   output: {
